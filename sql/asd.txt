@@ -1,0 +1,6 @@
+Adja meg lekérdezéssel, hogy az egyes napokon hány szót vettek fe! A mező neve darab szó legyen! HÁny különböző felvételi dátum van?
+
+SELECT felvetel, COUNT(angol)
+FROM szolista
+GROUP BY felvetel
+
