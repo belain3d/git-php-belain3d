@@ -27,4 +27,7 @@ FROM (hely INNER JOIN munkalap ON hely.az=munkalap.helyaz) INNER JOIN szerelo ON
 WHERE nev="Szabó Mihály" AND telepules="Barackfalva"
 ORDER BY utca
 --8. A legkisebb anyagárral melyik település melyik utcájában melyik szerelő végzett javítást? (1 rekord)
-
+SELECT anyagar, telepules, utca, szerelo.nev
+FROM (hely INNER JOIN munkalap ON hely.az=munkalap.helyaz) INNER JOIN szerelo ON szerelo.az=munkalap.szereloaz
+ORDER BY anyagar
+LIMIT 1;
